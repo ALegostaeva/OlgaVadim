@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>
+		Оля и Вадим, с днем свадьбы!
+	</title>
+	<style>
+		body {
+			background: #43467F;
+			display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+		}
+
+        h1{
+            color: rgba(237, 229, 249, 0.9);
+            position: absolute;
+            left: 30%;
+            top: 40px;
+        }
+
+        p{
+            color: white;
+        }
+
+        img{
+            max-height: 200px;
+        }
+
+        .main{
+            margin-left: auto;
+            margin-right: auto;
+            float: left;
+            max-width: 100%;
+            justify-content: center
+        }
+
+        .sticky {
+            background: linear-gradient(69.16deg, rgba(131, 84, 207, 0.16) -0.69%, rgba(255, 255, 255, 0) 102.71%), rgba(203, 188, 248, 0.6);
+            padding: 5px 20px 10px 20px;
+            width: 250px;
+            margin: 30px auto;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.03), inset -1px -0.5px 2px rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(8px);
+            border-radius: 6px;
+            position: relative;
+            font: 13px "Lucida Grande", Serif;
+        }
+
+        .sticky h2 {
+            color: rgba(237, 229, 249, 0.9);
+            }
+
+        .sticky:before,
+        .sticky:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            left: 20px;
+            bottom: 10px;
+            width: 70%;
+            max-width: 300px;
+            max-height: 100px;
+            height: 55%;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            }
+
+        .sticky:after {
+            left: auto;
+            right: 20px;
+            }
+
+        .hidden {
+	        display: none;
+        }
+    
+	</style>
+</head>
+<body>
+<div id="main">
+	<h1>Оля и Вадим! С ДНЁМ СВАДЬБЫ!!!</h1>
+    <span id="Sasha" onclick="showCard(1,'Sasha')" class="heart">
+		<img src="heart.svg">
+	</span>
+    <div id="1" class="sticky hidden" onclick="hideCard(1,'Sasha')">
+        <h2>Поздравляю!</h2>
+        <p>Ну все, пути назад нет! Впереди только счастье и любовь! Пусть жизнь будет без багов! Желаю чтобы в доме всегда жило счастье и спокойствие. Чтобы после трудовго дня и всей фигня во внешнем мире, вы приходили домой как в собственный защищенный бастион, где вас ждет верный друг и боевой товарщ, который поддержит, успокоит, и вместевы справитесь со всем. Это самое приятное чувство в мире. Вы классные!</p>
+        <p>Крепко обнимаю, Ваша Саша</p>
+    <div>
+</div>
+<script>
+
+    const showCard = (id,name) => {
+        console.log(id,name)
+        let card = document.getElementById(id)
+        card.classList.remove('hidden')
+        let heart = document.getElementById(name)
+        heart.classList.add('hidden')
+
+    }
+
+    const hideCard = (id,name) => {
+        console.log(id,name)
+        let card = document.getElementById(id)
+        card.classList.add('hidden')
+        let heart = document.getElementById(name)
+        heart.classList.remove('hidden')
+
+    }
+
+
+    console.log("%cOlya, we love you! 💖 TTTeam", "color: lightcoral; font-size: large");
+    console.log("%cVadim, be brave! 💖 TTTeam", "color: lightcoral; font-size: large");
+    console.log('made with love (c) TTTeam')
+</script>
+</body>
+</html>
